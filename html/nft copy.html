@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>64RECTANGLES</title>
+  <meta name="description" content="RECTANGLE" />
+  <style type="text/css">
+    body { background:#888;overflow:hidden; }
+    #container{position:absolute;left:0;top:0;transform-origin: 0 0;}
+    svg{ width: 100px; height: 100px; }
+  </style>
+  <script>
+    window.onload=()=>{
+        resize();
+        window.addEventListener("resize",resize);
+        function resize(e){
+            let s1 = window.innerWidth/100;
+            let s2 = window.innerHeight/100;
+            container.style.transform=`scale(${s1},${s2})`;
+        }
+    }
+  </script>
+</head>
+<body>
+  
+    <div id="container">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="background-color:#888;">
+        <style>.rm{ animation: anim 100ms infinite linear alternate; } text{ text-anchor: middle; dominant-baseline: central; font-size:3px; font-family: Helvetica, Sans-serif;} @keyframes anim {0%{ opacity: 0;} 100%{ opacity: 1;}}</style>
+        <rect width="33" height="44" x="11" y="22" style="fill:#0f0;" />
+        <rect width="33" height="44" x="11" y="22" style="fill:#0ff;animation-duration:1000ms;" class="rm" />
+        <rect width="22" height="99" x="33" y="11" style="fill:#f00;" />
+        <rect width="22" height="99" x="33" y="11" style="fill:#ff0;animation-duration:600ms;" class="rm" />
+        <rect width="99" height="10" x="23" y="4" style="fill:#fff;" />
+        <rect width="99" height="10" x="23" y="4" style="fill:#ff0;animation-duration:200ms;" class="rm" />
+    </svg>
+
+    </div>
+  
+</body>
+</html>
